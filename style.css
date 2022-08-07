@@ -92,3 +92,11 @@ html{
     }
     
 }
+@media (max-width:550px) {
+    .music-content{
+        height: 100vh;
+          
+    }
+
+    
+}
