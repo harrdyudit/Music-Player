@@ -76,10 +76,10 @@ const nextSong=()=>{
     playMusic();
     
 }
-// function for prewSong when user  click the backward button
+// function for prewSong when user  click the  button
 
 const prewSong=()=>{
-    songIndex=(songIndex-1+songs.length) % songs.length;
+    songIndex=(songIndex-1 + songs.length) % songs.length;
     loadSong(songs[songIndex]);
     playMusic();
 }
