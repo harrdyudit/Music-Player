@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+
+}
+.music-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f6f6f6;
+    display: grid;
+    place-items: center;
+}
+.music-content{
+    width: 35rem;
+    height: 45rem;
+    border-radius: 1.5rem;
+   box-shadow: 0 .5rem 3rem .2rem rgba(0, 0, 0, 0.5);
+   text-align: center;
+      
+}
+#title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0 .5rem 0;
+    letter-spacing: .7rem;
+    text-shadow: .2rem .3rem 1rem rgba(0, 0, 0, 0.5);
+   
+}
+#artist{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.4rem 0rem;
+    letter-spacing: .2rem;
+    
+
+}
+.music-img{
+    width: 22rem;
+    height: 22rem;
+    margin: auto;
+    
+}
+.music-img img{
+    margin: 1rem 0rem;
+  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: .2rem 1.2rem 3rem 1.2rem rgba(0, 0, 0, 0.4);
+    
+}
+.music-control{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    /* margin: auto; */
+    cursor: pointer;
+    margin: 4rem 0rem;
+}
+.music-control .fa-circle-play{
+    font-size:2.9rem;
+}
+.music-control .fas:hover{
+    color: gray;
+    transition:  all .2s linear;
+}
+
+.fa-circle-pause{
+    font-size: 2.9rem;
+}
+.animate{
+    animation-name: rotatePlayer;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   animation-duration: 4s;
+
+}
+@keyframes rotatePlayer{
+    from{
+        transform: rotate(0deg);
+
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+    
+}
