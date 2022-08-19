@@ -149,7 +149,7 @@ html {
     -moz-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
 
-    appearance: none;
+    /* appearance: none; */
     margin-top: 1rem;
     margin-left: .6rem;
 
@@ -163,8 +163,8 @@ html {
     width: 0%;
     background-color: rgb(216, 216, 133);
     height: 100%;
-    margin-top: 1rem;
-    position: relative;
+    /* margin-top: 1rem; */
+   
     border-radius: 4rem;
 
 

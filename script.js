@@ -8,7 +8,7 @@ const next = document.getElementById("forward");
 const progress = document.getElementById("progress");
 const current_time = document.getElementById("current_time");
 let total_duration = document.getElementById("duration");
-let progress_div=document.querySelector(".progress_div");
+let progress_div=document.getElementById("progress_div");
 const songs = [
     {
         name: "Asal-1",
@@ -66,11 +66,16 @@ songIndex = 0;
 // loadSong(songs[2]);
 
 const nextSong = () => {
-    songIndex = (songIndex + 1) % songs.length
-    loadSong(songs[songIndex]);
+    // songIndex = (songIndex + 1) % songs.length
+    // loadSong(songs[songIndex]);
 
-    playMusic();
-
+    // playMusic();
+    songIndex++
+    if(songIndex>songs.length){
+        songIndex=0
+    }
+loadSong(songs[songIndex]);
+playMusic();
 }
 const prewSong = () => {
     songIndex--;
@@ -85,7 +90,7 @@ const prewSong = () => {
 
 music.addEventListener("timeupdate", (ev) => {
 
-    const { currentTime, duration } = ev.target;
+    const { currentTime, duration } = ev.srcElement;
     // formula for get progress time
     let progress_time = (currentTime / duration) * 100;
 
@@ -97,17 +102,19 @@ music.addEventListener("timeupdate", (ev) => {
     // convert second into minute
 
 
-    // curreny=t duration update
+    // current duration update
     const min_duration = Math.floor(duration / 60);
     // find second
     const sec_duration = Math.floor(duration % 60);
-
-
-
     let updateduration = `${min_duration}:${sec_duration}`;
+    if(min_duration){
+    
+        total_duration.textContent = `${updateduration}`
+    }
 
 
-    total_duration.textContent = `${updateduration}`
+
+
 
     // current time update duration
     let min_currentTime=Math.floor(currentTime/60)
@@ -121,14 +128,16 @@ music.addEventListener("timeupdate", (ev) => {
 });
 // progress-div when user click on progress bar and change song duration
 progress_div.addEventListener("click",(event)=>{
-    console.log(event);
-const {duration}=music;
-    let move_progress=(event.offsetX/event.target.clientWidth)*duration;
+    // console.log(event);
+    const {duration}=music;
     // console.log(duration);
+    let move_progress=(event.offsetX/event.target.clientWidth) * duration;
     // console.log(move_progress);
     music.currentTime=move_progress;
+    
 
-})
+});
+
 
 // event for when the current song end the next song will automatically play
 music.addEventListener("ended",nextSong)
