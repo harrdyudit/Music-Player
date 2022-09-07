@@ -146,5 +146,7 @@ music.addEventListener("ended",nextSong)
 next.addEventListener("click", nextSong)
 prew.addEventListener("click", prewSong)
 
+// ok
+
 
 
