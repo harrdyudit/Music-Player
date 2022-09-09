@@ -16,14 +16,14 @@ const songs = [
     artist: "Darshan Raval",
   },
   {
-    name: "Dippam-2",
-    title: "Dippam",
-    artist: "Anirudh",
-  },
-  {
     name: "Tu Mileya-3",
     title: "Tu Mileya",
     artist: "Darshan Raval",
+  },
+  {
+    name: "Dippam-2",
+    title: "Dippam",
+    artist: "Anirudh",
   },
 ];
 
