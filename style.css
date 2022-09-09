@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -18,7 +20,7 @@ html {
 }
 
 .music-content {
-    width: 32rem;
+    width: 33rem;
     height: 45rem;
     border-radius: 1.5rem;
     box-shadow: .1rem .1rem .1rem 0rem rgba(0, 0, 0, 0.0);
