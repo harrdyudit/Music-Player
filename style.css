@@ -1,181 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
 }
 
 html {
-    font-size: 62.5%;
-
+  font-size: 62.5%;
 }
 
 .music-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: #7f8c8d;
-    display: grid;
-    place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #7f8c8d;
+  display: grid;
+  place-items: center;
 }
 
 .music-content {
-    width: 33rem;
-    height: 45rem;
-    border-radius: 1.5rem;
-    box-shadow: .1rem .1rem .1rem 0rem rgba(0, 0, 0, 0.0);
-    text-align: center;
-    background-color: #bdc3c7;
-    
+  width: 33rem;
+  height: 50rem;
+  border-radius: 1.5rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0rem rgba(0, 0, 0, 0);
+  text-align: center;
+  background-color: #bdc3c7;
+  position: relative;
 }
 
 #title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 1.5rem 0 .5rem 0;
-    letter-spacing: .7rem;
-    text-shadow: .2rem .3rem 1rem rgba(0, 0, 0, 0.5);
-
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem 0;
+  letter-spacing: 0.7rem;
+  text-shadow: 0.2rem 0.3rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 #artist {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 1.4rem 0rem;
-    letter-spacing: .2rem;
-
-
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.4rem 0rem;
+  letter-spacing: 0.2rem;
 }
 
 .music-img {
-    width: 22rem;
-    height: 22rem;
-    margin: auto;
-
+  width: 22rem;
+  height: 22rem;
+  margin: auto;
 }
 
 .music-img img {
-    margin: 1rem 0rem;
+  margin: 1rem 0rem;
 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: .2rem 1.2rem 3rem 1.2rem rgba(0, 0, 0, 0.4);
-
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0.2rem 1rem 3rem 1.2rem rgba(0, 0, 0, 0.4);
 }
 
 .music-control {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 2rem;
-    /* margin: auto; */
-    cursor: pointer;
-    margin: 2rem 0rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  /* margin: auto; */
+  cursor: pointer;
+  margin: 2rem 0rem;
 }
 
 .music-control .fa-circle-play {
-    font-size: 2.9rem;
+  font-size: 2.9rem;
 }
 
 .music-control .fas:hover {
-    color: gray;
-    transition: all .2s linear;
+  color: gray;
+  transition: all 0.2s linear;
 }
 
 .fa-circle-pause {
-    font-size: 2.9rem;
+  font-size: 2.9rem;
 }
 
 .animate {
-    animation-name: rotatePlayer;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-
+  animation-name: rotatePlayer;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
 }
 
 @keyframes rotatePlayer {
-    from {
-        transform: rotate(0deg);
+  from {
+    transform: rotate(0deg);
+  }
 
-    }
-
-    to {
-        transform: rotate(360deg);
-
-    }
-
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-@media (max-width:550px) {
-    .music-content {
-        height: 75vh;
 
-    }
-
-
+@media (max-width: 550px) {
+  .music-content {
+    height: 85vh;
+  }
 }
-
-;
 
 /* progrss bar */
 .progress-container {
-    width: 100%;
-    height: auto;
-    padding: 1rem 0;
-    margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  margin-top: 1rem;
 }
 
 .progress-duration {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 3rem;
-    padding: 0rem .3rem;
-    font-size: 1.3rem;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0rem 0.3rem;
+  font-size: 1.3rem;
 }
 
 .progress_div {
-    width: 95%;
-    height: 0.5rem;
-    background-color: rgb(119, 148, 173);
-    border-radius: 6rem;
+  width: 95%;
+  height: 0.5rem;
+  background-color: rgb(119, 148, 173);
+  border-radius: 6rem;
 
-    position: relative;
+  position: relative;
 
-    cursor: pointer;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 
-    /* appearance: none; */
-    margin-top: 1rem;
-    margin-left: .6rem;
-
-
+  /* appearance: none; */
+  margin-top: 1rem;
+  margin-left: 0.6rem;
 }
 
 .progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    background-color: rgb(216, 216, 133);
-    height: 100%;
-    /* margin-top: 1rem; */
-   
-    border-radius: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color: rgb(216, 216, 133);
+  height: 100%;
+  /* margin-top: 1rem; */
 
+  border-radius: 4rem;
 
+  cursor: pointer;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  appearance: none;
+}
 
-    cursor: pointer;
-    transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    appearance: none;
+#heart {
+  position: absolute;
+  right: 1.3rem;
+  top: 2.2rem;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+.hearts {
+  color: red;
+}
+#popup {
+  text-align: center;
 }

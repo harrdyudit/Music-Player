@@ -22,8 +22,8 @@ const songs = [
   },
   {
     name: "Dippam-2",
-    title: "Dippam",
-    artist: "Anirudh",
+    title: "Dippam ",
+    artist: "Anirudh Ravichandran",
   },
 ];
 
@@ -34,6 +34,7 @@ const playMusic = () => {
   music.play();
   playd.classList.replace("fa-circle-play", "fa-circle-pause");
   img.classList.add("animate");
+  
 };
 const pauseMusic = () => {
   isPlaying = false;
@@ -123,5 +124,3 @@ music.addEventListener("ended", nextSong);
 
 next.addEventListener("click", nextSong);
 prew.addEventListener("click", prewSong);
-
-// ok
