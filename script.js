@@ -34,7 +34,6 @@ const playMusic = () => {
   music.play();
   playd.classList.replace("fa-circle-play", "fa-circle-pause");
   img.classList.add("animate");
-  
 };
 const pauseMusic = () => {
   isPlaying = false;
